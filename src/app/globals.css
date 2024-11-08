@@ -2,20 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: #77b255;
+}
+
+/* Add Agbalumo font family */
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+.agbalumo {
+    font-family: 'Agbalumo', system-ui, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+    }
 }
