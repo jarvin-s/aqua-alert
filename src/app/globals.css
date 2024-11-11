@@ -6,15 +6,6 @@ body {
     background-color: #77b255;
 }
 
-/* Add Agbalumo font family */
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
-
-.agbalumo {
-    font-family: 'Agbalumo', system-ui, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
 @layer base {
     :root {
         --radius: 0.5rem;
