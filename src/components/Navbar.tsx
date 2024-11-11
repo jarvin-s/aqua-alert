@@ -70,7 +70,7 @@ const Navbar = () => {
                 <Link href='/' className='mr-6 hidden md:flex' prefetch={false}>
                     <Image
                         src={logo}
-                        width={0}
+                        width={220}
                         height={0}
                         alt='Aqua Alert logo'
                     />
