@@ -7,47 +7,45 @@ import footer from '../../public/images/shapes/footer.svg'
 const Footer = () => {
     return (
         <>
-            <>
-                <div className='relative bg-[#1d4497] max-w-[1920px]'>
-                    <div className='absolute inset-0 top-0'>
-                        <Image
-                            className='w-full rotate-180'
-                            src={footer}
-                            alt='Footer shape'
-                        />
-                    </div>
+            <div className='relative bg-[#1d4497] w-full'>
+                <div className='absolute left-0 right-0 top-[-10px]'>
+                    <Image
+                        className='w-full rotate-180'
+                        src={footer}
+                        alt='Footer shape'
+                    />
+                </div>
 
-                    <div className='relative top-[30px] z-10 ml-10 max-w-[400px] md:ml-[118px]'>
-                        <div className='flex justify-between'>
-                            <div className='flex flex-col'>
-                                <Link href='/' prefetch={false}>
-                                    <Image
-                                        className='w-[40%] md:w-[60%]'
-                                        src={logo}
-                                        alt='Aqua Alert logo'
-                                    />
-                                    <span className='sr-only'>Aqua Alert</span>
-                                </Link>
-                                <div className='mt-4 text-white'>
-                                    <p>Rachelsmolen 1</p>
-                                    <p>5612 MA Eindhoven</p>
-                                    <p>info@aqua-alert.nl</p>
-                                    <p>088 508 0000</p>
-                                </div>
+                <div className='relative top-[50px] z-10 ml-10 max-w-[400px] md:ml-[118px]'>
+                    <div className='flex justify-between'>
+                        <div className='flex flex-col'>
+                            <Link href='/' prefetch={false}>
+                                <Image
+                                    className='w-[40%] md:w-[60%]'
+                                    src={logo}
+                                    alt='Aqua Alert logo'
+                                />
+                                <span className='sr-only'>Aqua Alert</span>
+                            </Link>
+                            <div className='mt-4 text-white'>
+                                <p>Rachelsmolen 1</p>
+                                <p>5612 MA Eindhoven</p>
+                                <p>info@aqua-alert.nl</p>
+                                <p>088 508 0000</p>
                             </div>
                         </div>
                     </div>
-                    <div className='flex justify-center pt-20 text-center md:text-left pb-4'>
-                        <p className='text-white opacity-50'>
-                            © Aqua Alert B.V. Alle rechten voorbehouden.
-                            <a href='/terms-and-conditions'>
-                                {' '}
-                                Algemene Voorwaarden
-                            </a>
-                        </p>
-                    </div>
                 </div>
-            </>
+                <div className='flex justify-center pb-4 pt-20 text-center md:text-left'>
+                    <p className='text-white opacity-50'>
+                        © Aqua Alert B.V. Alle rechten voorbehouden.
+                        <a href='/terms-and-conditions'>
+                            {' '}
+                            Algemene Voorwaarden.
+                        </a>
+                    </p>
+                </div>
+            </div>
         </>
     )
 }
