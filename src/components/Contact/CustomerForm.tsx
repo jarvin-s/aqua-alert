@@ -9,8 +9,15 @@ const CustomerForm = () => {
         <>
             <div className='m-[20px] border-4 border-dashed border-[#0F5E05] bg-gray-300 px-12 py-12 md:mx-auto md:w-[50rem] md:px-0'>
                 <div className='mx-auto text-center'>
-                    <h2 className='text-4xl font-bold tracking-tight'>
+                    <h2 className='text-6xl font-bold tracking-tight text-[#0F5E05]'>
                         Contact
+                    </h2>
+                    <h2 className='mt-4 flex justify-center text-2xl'>
+                        Vragen?&nbsp;
+                        <span className='underline decoration-[#0F5E05] decoration-wavy'>
+                            Aarzel niet!
+                        </span>{' '}
+                        <span className='animate-bounce'>👇</span>
                     </h2>
                 </div>
                 <form className='mx-auto mt-16 max-w-xl sm:mt-20'>
@@ -77,7 +84,7 @@ const CustomerForm = () => {
                             <Textarea
                                 rows={8}
                                 cols={55}
-                                className='rounded-lg border-2 bg-white focus:border-[#0F5E05] focus:outline-none focus-visible:ring-0 placeholder:opacity-60'
+                                className='rounded-lg border-2 bg-white placeholder:opacity-60 focus:border-[#0F5E05] focus:outline-none focus-visible:ring-0'
                                 placeholder='Uw bericht'
                             />
                         </div>
