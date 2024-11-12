@@ -1,9 +1,9 @@
-import React from 'react'
+import OurWork from '@/components/Work/OurWork'
 
 const Work = () => {
     return (
         <>
-            <h1>Work</h1>
+            <OurWork />
         </>
     )
 }

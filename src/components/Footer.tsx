@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <>
             <>
-                <div className='relative bg-[#1d4497]'>
+                <div className='relative bg-[#1d4497] max-w-[1920px]'>
                     <div className='absolute inset-0 top-0'>
                         <Image
                             className='w-full rotate-180'
@@ -37,7 +37,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='flex justify-center pt-20 text-center md:text-left'>
+                    <div className='flex justify-center pt-20 text-center md:text-left pb-4'>
                         <p className='text-white opacity-50'>
                             © Aqua Alert B.V. Alle rechten voorbehouden.
                             <a href='/terms-and-conditions'>

@@ -1,7 +1,9 @@
+import CustomerForm from '@/components/Contact/CustomerForm'
+
 const Contact = () => {
     return (
         <>
-            <h1>Contact</h1>
+            <CustomerForm />
         </>
     )
 }
