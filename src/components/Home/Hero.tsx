@@ -10,10 +10,10 @@ import plant_blob_bg from '../../../public/images/shapes/plant-blob-bg.svg'
 import hero_words from '../../../public/images/hero/hero-words.png'
 import mobile_app from '../../../public/images/mobile-app.png'
 import google_play from '../../../public/images/google-play.svg'
-import { Agbalumo } from 'next/font/google'
+import { Esteban } from 'next/font/google'
 import { motion, useInView } from 'framer-motion'
 
-const agbalumo = Agbalumo({ weight: '400', subsets: ['latin'] })
+const agbalumo = Esteban({ weight: '400', subsets: ['latin'] })
 const Hero = () => {
     const ref = useRef(null)
     // Show animation when element is 50% in view
