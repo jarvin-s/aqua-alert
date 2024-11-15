@@ -4,10 +4,24 @@
 
 body {
     background-color: #77b255;
+    overflow-x: hidden;
+}
+
+.mobile-gradient {
+    filter: blur(86px);
+    background-image: linear-gradient(rgb(214, 214, 214), #d4d4d4);
+    border-radius: 81% 70% 70% 30% / 30% 105% 70% 70%;
 }
 
 @layer base {
     :root {
         --radius: 0.5rem;
     }
+}
+
+.rectangle {
+    position: absolute;
+    transform: rotate(180deg);
+    background-color: #0d214b;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 100px));
 }

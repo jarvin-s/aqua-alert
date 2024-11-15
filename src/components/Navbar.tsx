@@ -14,12 +14,12 @@ import {
 } from '@/components/ui/navigation-menu'
 import Image from 'next/image'
 import logo from '../../public/images/logo.png'
-import seedling from '../../public/images/seedling.png'
+import plant_happy from '../../public/images/plant_happy.png'
 
 const Navbar = () => {
     return (
         <>
-            <header className='sticky top-0 z-[100] flex h-20 w-full shrink-0 items-center justify-end px-4 md:justify-between md:border-b-[1px] md:border-[#ffffff98] md:bg-[#77b2555d] md:px-6 md:backdrop-blur-md'>
+            <header className='sticky top-0 z-[100] flex h-20 w-full shrink-0 items-center justify-end border-b-[1px] border-[#ffffff48] bg-[#77b2555d] px-6 backdrop-blur-md md:justify-between'>
                 <Sheet>
                     <SheetTrigger asChild>
                         <Button
@@ -38,8 +38,13 @@ const Navbar = () => {
                         side='right'
                     >
                         <SheetTitle className='hidden'>Aqua Alert</SheetTitle>
-                        <Link href='#' prefetch={false}>
-                            <Image src={seedling} width={0} height={0} alt='Seedling'/>
+                        <Link className='flex justify-center' href='#' prefetch={false}>
+                            <Image
+                                src={plant_happy}
+                                width={80}
+                                height={0}
+                                alt='Seedling'
+                            />
                             <span className='sr-only'>Aqua Alert</span>
                         </Link>
                         <div className='grid gap-2 py-6'>
@@ -70,7 +75,7 @@ const Navbar = () => {
                 <Link href='/' className='mr-6 hidden md:flex' prefetch={false}>
                     <Image
                         src={logo}
-                        width={220}
+                        width={300}
                         height={0}
                         alt='Aqua Alert logo'
                     />
@@ -102,7 +107,7 @@ const Navbar = () => {
                                 className='group inline-flex h-9 w-max items-center justify-center rounded-md disabled:pointer-events-none disabled:opacity-50'
                                 prefetch={false}
                             >
-                                <span className='rounded-md bg-[#0F5E05] px-4 py-2 duration-300 hover:bg-[#2c7722]'>
+                                <span className='ml-4 rounded-md bg-[#ff7e28] px-4 py-2 duration-300 hover:bg-[#fc9958]'>
                                     Contact
                                 </span>
                             </Link>
