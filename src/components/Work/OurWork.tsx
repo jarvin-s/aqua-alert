@@ -2,21 +2,20 @@
 
 import Image from 'next/image'
 import React, { useRef } from 'react'
-import hero from '../../../public/images/hero-1.png'
-import hero2 from '../../../public/images/hero-2.png'
+import hero from '../../../public/images/hero/hero-1.png'
+import hero2 from '../../../public/images/hero/hero-2.png'
 import hero_bg from '../../../public/images/droplets.png'
 import { motion, useInView } from 'framer-motion'
-import { relative } from 'path'
 import { Badge } from '../ui/badge'
 
 const OurWork = () => {
     const ref = useRef(null)
-    // Show animation when element is 50% in view
-    const isInView = useInView(ref, { amount: 0.5, once: true })
+    // Show animation when element is 30% in view
+    const isInView = useInView(ref, { amount: 0.3, once: true })
 
     const ref2 = useRef(null)
-    // Show animation when element is 50% in view
-    const isInView2 = useInView(ref2, { amount: 0.5, once: true })
+    // Show animation when element is 30% in view
+    const isInView2 = useInView(ref2, { amount: 0.3, once: true })
 
     const visible = { opacity: 1, y: 0, transition: { duration: 0.85 } }
 
@@ -35,24 +34,33 @@ const OurWork = () => {
                     variants={{
                         visible: {
                             transition: {
-                                staggerChildren: 0.3,
-                                delayChildren: 0.2,
+                                delayChildren: 0.4,
                             },
                         },
                     }}
                     className='flex justify-center'
                 >
-                    <motion.h1
+                    <motion.div
+                        className='flex flex-col items-center text-center'
                         variants={items_variants}
-                        className='text-center text-7xl text-white md:text-left md:text-8xl'
                     >
-                        Ons{' '}
-                        <span className='font-bold text-[#0F5E05]'>werk</span>.
-                    </motion.h1>
+                        <h1 className='text-center text-7xl text-white md:text-left md:text-8xl'>
+                            Ons{' '}
+                            <span className='font-bold text-[#0F5E05]'>
+                                werk
+                            </span>
+                            .
+                        </h1>
+                        <p className='text-md mt-4 max-w-[34rem] text-white'>
+                            Het werk wat wij doen als Aqua Alert richt zich op
+                            het creëren van innovatieve en duurzame oplossingen
+                            voor plantenverzorging.
+                        </p>
+                    </motion.div>
                 </motion.div>
 
                 <motion.div
-                    className='mt-20'
+                    className='mt-10'
                     initial='hidden'
                     animate='visible'
                     variants={{
@@ -97,7 +105,7 @@ const OurWork = () => {
                         },
                     },
                 }}
-                className='relative my-20 h-[60vh] bg-[#e0e0e275] px-4 text-black'
+                className='relative my-24 h-[60vh] bg-[#e0e0e275] px-4 text-black'
             >
                 <motion.section
                     className='flex flex-col-reverse items-center justify-center md:flex-row'
@@ -131,6 +139,7 @@ const OurWork = () => {
                         </div>
                     </div>
                     <div className='relative -mt-[11rem]'>
+                        {/* <div className='section-gradient absolute -left-[250px] -top-[150px] z-[-1] h-[800px] w-[2200px] border-4'></div> */}
                         <Image
                             className='rounded-lg'
                             src={hero}
@@ -154,7 +163,7 @@ const OurWork = () => {
                         },
                     },
                 }}
-                className='my-20 h-[50vh] px-4'
+                className='my-24 h-[50vh] px-4'
             >
                 <motion.section
                     className='flex flex-col items-center justify-center md:flex-row'
@@ -169,7 +178,7 @@ const OurWork = () => {
                             alt='Test image 2'
                         />
                     </div>
-                    <div className='ml-20 mt-4 flex max-w-xl flex-col space-y-4 rounded-2xl bg-[#0F5E05] px-4 py-4 text-white'>
+                    <div className='ml-0 mt-4 flex max-w-xl flex-col space-y-4 rounded-2xl bg-[#0F5E05] px-4 py-4 text-white md:ml-20'>
                         <h1 className='mb-[.5rem] text-4xl font-bold'>
                             Lorem ipsum
                         </h1>
