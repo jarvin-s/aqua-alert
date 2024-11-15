@@ -48,7 +48,7 @@ const Hero = () => {
                     className='z-10 mt-20 flex max-w-[570px] flex-col items-center px-2 md:ml-20 md:items-stretch'
                     variants={items_variants}
                 >
-                    <div className='absolute -left-[504px] top-[78px] z-[-1] blur-[4px]'>
+                    <div className='absolute -left-[504px] top-[78px] z-[-1] blur-[4px] rotate-[4deg]'>
                         <Image
                             className='w-[46rem] -scale-x-100'
                             src={tree}
