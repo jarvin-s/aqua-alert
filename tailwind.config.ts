@@ -10,6 +10,15 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			animation: {
+				'small-bounce': 'small-bounce 2.25s ease-in-out infinite',
+			},
+			keyframes: {
+				'small-bounce': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-2%)' },
+				},
+			},
 			colors: {
 				background: 'var(--background)',
 				foreground: 'var(--foreground)'

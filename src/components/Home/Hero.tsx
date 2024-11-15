@@ -89,26 +89,29 @@ const Hero = () => {
                     </div>
                 </motion.div>
 
-                </div>
-                <div
-                    className='mt-20 flex w-full flex-col items-center justify-center gap-8 md:flex-row'
-                    style={{ justifyContent: 'space-evenly' }}
+                {/* Mobile app section */}
+                <motion.div
+                    className='z-10 mt-20 flex w-full justify-center'
+                    variants={items_variants}
                 >
-                    <div className='relative z-10 h-48 w-48'>
-                        <div className='absolute -bottom-[20px] right-[20px] z-[-1]'>
-                            <svg
-                                className='h-[10rem] w-full'
-                                width='220'
-                                viewBox='0 0 68 68'
-                                fill='none'
-                                xmlns='http://www.w3.org/2000/svg'
-                            >
-                                <path
-                                    d='M65.1709 54.2125C54.5935 72.3642 13.016 72.6884 2.68263 54.6177C-7.56936 36.547 13.4228 0.0814557 34.2522 0.000421176C55.0817 -0.161648 75.667 35.9797 65.1709 54.2125Z'
-                                    fill='#0F5E05'
-
-                {/* Hero right */}
-                {/* <div className='flex w-full flex-col items-center justify-end md:flex-row md:items-stretch'>
+                    <div className='relative flex flex-col items-center gap-4'>
+                        <div className='mobile-gradient absolute h-[400px] w-[400px]'></div>
+                        <Image
+                            className='animate-small-bounce'
+                            src={mobile_app}
+                            width={300}
+                            alt='Mobile app'
+                        />
+                        <Image
+                            className='cursor-pointer'
+                            src={google_play}
+                            alt='Google Play'
+                        />
+                    </div>
+                </motion.div>
+            </motion.div>
+            {/* Hero right */}
+            {/* <div className='flex w-full flex-col items-center justify-end md:flex-row md:items-stretch'>
                     <motion.div
                         className='mr-24 mt-20 flex flex-col items-center justify-center gap-14 text-4xl md:items-stretch'
                         variants={items_variants}
@@ -159,7 +162,6 @@ const Hero = () => {
                         </div>
                     </motion.div>
                 </div> */}
-            </motion.div>
             <div className='relative'>
                 <div className='rectangle -bottom-[1px] h-[200px] w-full'></div>
             </div>
