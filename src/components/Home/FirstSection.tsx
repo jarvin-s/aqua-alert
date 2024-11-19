@@ -7,8 +7,8 @@ import { motion, useInView } from 'framer-motion'
 
 const FirstSection = () => {
     const ref = useRef(null)
-    // Show animation when element is 50% in view
-    const isInView = useInView(ref, { amount: 0.5, once: true })
+    // Show animation when element is 30% in view
+    const isInView = useInView(ref, { amount: 0.3, once: true })
 
     const visible = { opacity: 1, transition: { duration: 0.85 } }
 

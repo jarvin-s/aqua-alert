@@ -96,13 +96,12 @@ const Hero = () => {
                             },
                         },
                     }}
-                    className='z-10 mt-20 flex w-full justify-center'
+                    className='z-10 md:mt-20 mt-40 flex w-full justify-center'
                 >
                     <motion.div
                         className='relative flex flex-col items-center gap-4'
                         variants={items_variants}
                     >
-                        <div className='mobile-gradient absolute h-[400px] w-[400px]'></div>
                         <Image
                             className='animate-small-bounce'
                             src={mobile_app}
