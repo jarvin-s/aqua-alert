@@ -2,14 +2,10 @@
 
 import Image from 'next/image'
 import React, { useRef } from 'react'
-import tree from '../../../public/images/hero/hero-tree.png'
-import plant_blob from '../../../public/images/hero/hero-plant-blob.png'
-import plant_circle from '../../../public/images/hero/hero-plant-circle.png'
-import hero_blob_right from '../../../public/images/shapes/hero-blob-right.svg'
-import plant_blob_bg from '../../../public/images/shapes/plant-blob-bg.svg'
-import hero_words from '../../../public/images/hero/hero-words.png'
-import mobile_app from '../../../public/images/mobile-app.png'
-import google_play from '../../../public/images/google-play.svg'
+import tree from '@/images/hero/hero-tree.png'
+import mobile_app from '@/images/mobile-app.png'
+import google_play from '@/images/google-play.svg'
+import apple_store from '@/images/apple-store.svg'
 import { Esteban } from 'next/font/google'
 import { motion, useInView } from 'framer-motion'
 
@@ -42,13 +38,13 @@ const Hero = () => {
                         },
                     },
                 }}
-                className='bg-droplet relative flex min-h-screen max-w-[1920px] flex-col md:flex-row'
+                className='bg-droplet relative flex min-h-screen max-w-[1920px] flex-col pb-40 md:flex-row'
             >
                 <motion.div
                     className='z-10 mt-20 flex max-w-[570px] flex-col items-center px-2 md:ml-20 md:items-stretch'
                     variants={items_variants}
                 >
-                    <div className='absolute -left-[504px] top-[78px] z-[-1] blur-[4px] rotate-[4deg]'>
+                    <div className='absolute -left-[504px] top-[78px] z-[-1] rotate-[4deg] blur-[4px]'>
                         <Image
                             className='w-[46rem] -scale-x-100'
                             src={tree}
@@ -91,10 +87,21 @@ const Hero = () => {
 
                 {/* Mobile app section */}
                 <motion.div
+                    initial='hidden'
+                    animate='visible'
+                    variants={{
+                        visible: {
+                            transition: {
+                                delayChildren: 0.75,
+                            },
+                        },
+                    }}
                     className='z-10 mt-20 flex w-full justify-center'
-                    variants={items_variants}
                 >
-                    <div className='relative flex flex-col items-center gap-4'>
+                    <motion.div
+                        className='relative flex flex-col items-center gap-4'
+                        variants={items_variants}
+                    >
                         <div className='mobile-gradient absolute h-[400px] w-[400px]'></div>
                         <Image
                             className='animate-small-bounce'
@@ -102,68 +109,34 @@ const Hero = () => {
                             width={300}
                             alt='Mobile app'
                         />
-                        <Image
-                            className='cursor-pointer'
-                            src={google_play}
-                            alt='Google Play'
-                        />
-                    </div>
+                        <div className='flex gap-4'>
+                            <Image
+                                className='cursor-pointer'
+                                src={apple_store}
+                                alt='Google Play'
+                            />
+                            <Image
+                                className='cursor-pointer'
+                                src={google_play}
+                                alt='Google Play'
+                            />
+                        </div>
+                    </motion.div>
                 </motion.div>
             </motion.div>
-            {/* Hero right */}
-            {/* <div className='flex w-full flex-col items-center justify-end md:flex-row md:items-stretch'>
-                    <motion.div
-                        className='mr-24 mt-20 flex flex-col items-center justify-center gap-14 text-4xl md:items-stretch'
-                        variants={items_variants}
-                    >
-                        <span className='bg-[#0F5E05] px-2 py-1'>
-                            <h1 className='font-bold text-white'>Efficiënt</h1>
-                        </span>
-
-                        <span className='bg-[#0F5E05] px-2 py-1'>
-                            <h1 className='font-bold text-white'>Natuurlijk</h1>
-                        </span>
-                        <span className='bg-[#0F5E05] px-2 py-1'>
-                            <h1 className='font-bold text-white'>
-                                Betrouwbaar
-                            </h1>
-                        </span>
-                    </motion.div>
-                    <motion.div
-                        className='relative mt-10 flex flex-col items-end gap-8'
-                        variants={items_variants}
-                    >
-                        <div className='absolute -right-[200px] -top-[20px] z-[-1] hidden w-[26rem] md:block'>
-                            <Image src={hero_blob_right} alt='Hero blob' />
-                        </div>
-                        <div className='relative z-10 h-48 w-48'>
-                            <div className='absolute -bottom-[20px] right-[24px] z-[-1]'>
-                                <Image
-                                    className='h-[9rem] w-full'
-                                    src={plant_blob_bg}
-                                    width={0}
-                                    alt='Plant blob bg'
-                                />
-                            </div>
-                            <Image
-                                className='h-full w-full rounded-lg object-cover'
-                                src={plant_blob}
-                                alt='Plant blob'
-                            />
-                        </div>
-                        <div className='h-48 w-48'>
-                            <Image
-                                className='rounded-full border-2 border-[#11350c] object-cover'
-                                src={plant_circle}
-                                width={0}
-                                height={0}
-                                alt='Plant circle'
-                            />
-                        </div>
-                    </motion.div>
-                </div> */}
             <div className='relative'>
-                <div className='rectangle -bottom-[1px] h-[200px] w-full'></div>
+                <div className='absolute -bottom-[1px] w-full'>
+                    <svg
+                        viewBox='0 0 710 76'
+                        fill='none'
+                        xmlns='http://www.w3.org/2000/svg'
+                    >
+                        <path
+                            d='M0 0C273.871 1.26258 425.702 38.5812 710 35.9733V76H0V0Z'
+                            fill='#0D214B'
+                        />
+                    </svg>
+                </div>
             </div>
         </>
     )
