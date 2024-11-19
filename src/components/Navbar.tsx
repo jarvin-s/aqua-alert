@@ -13,8 +13,8 @@ import {
     NavigationMenuLink,
 } from '@/components/ui/navigation-menu'
 import Image from 'next/image'
-import logo from '../../public/images/logo.png'
-import plant_happy from '../../public/images/plant_happy.png'
+import logo from '@/images/logo.png'
+import plant_happy from '@/images/plant_happy.png'
 
 const Navbar = () => {
     return (

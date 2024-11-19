@@ -2,9 +2,9 @@
 
 import Image from 'next/image'
 import React, { useRef } from 'react'
-import hero from '../../../public/images/hero/hero-1.png'
-import hero2 from '../../../public/images/hero/hero-2.png'
-import hero_bg from '../../../public/images/droplets.png'
+import hero from '@/images/hero/hero-arduino.jpg'
+import smart from '@/images/our-work-smart-watering.jpeg'
+import smart_monitor from '@/images/our-work-smart-monitoring.jpeg'
 import { motion, useInView } from 'framer-motion'
 import { Badge } from '../ui/badge'
 
@@ -27,7 +27,7 @@ const OurWork = () => {
     return (
         <>
             {/* Hero */}
-            <div className='bg-droplets relative mt-10 pb-96'>
+            <div className='relative mt-10 pb-96'>
                 <motion.div
                     initial='hidden'
                     animate='visible'
@@ -78,16 +78,9 @@ const OurWork = () => {
                         <Image
                             className='rounded-2xl'
                             src={hero}
-                            width={0}
+                            width={850}
                             height={0}
                             alt='Hero 1'
-                        />
-                        <Image
-                            className='w-full rounded-2xl md:w-80'
-                            src={hero2}
-                            width={0}
-                            height={0}
-                            alt='Hero 2'
                         />
                     </motion.div>
                 </motion.div>
@@ -111,9 +104,11 @@ const OurWork = () => {
                     className='flex flex-col-reverse items-center justify-center md:flex-row'
                     variants={items_variants}
                 >
-                    <div className='relative mt-4 flex max-w-xl flex-col space-y-4 rounded-2xl bg-[#0F5E05] px-4 py-4 text-white md:-mt-[11rem] md:mr-20'>
-                        <h1 className='text-4xl font-bold'>Lorem ipsum</h1>
-                        <div className='flex gap-2'>
+                    <div className='relative mt-4 flex max-w-xl flex-col space-y-4 rounded-2xl bg-[#0F5E05] px-6 py-6 text-white md:-mt-[11rem] md:mr-20'>
+                        <h1 className='text-center text-4xl font-bold md:text-left'>
+                            Slim waterbeheer systeem
+                        </h1>
+                        <div className='flex justify-center gap-2 md:justify-start'>
                             <Badge className='bg-[#77b255] text-white hover:bg-[#8bcf63]'>
                                 Natuurvriendelijk
                             </Badge>
@@ -122,14 +117,12 @@ const OurWork = () => {
                                 Efficiënt
                             </Badge>
                         </div>
-                        <p>
-                            Et aliquip non incididunt enim sit incididunt nisi
-                            mollit ad proident nostrud. Commodo excepteur ut
-                            eiusmod et dolor incididunt non ullamco. Ad enim est
-                            elit non Lorem aliquip enim aliquip consectetur aute
-                            deserunt sint nisi.
+                        <p className='text-center md:text-left'>
+                            Onze automatische wateringssystemen zijn ontworpen
+                            om efficiënt water te gebruiken, waardoor je planten
+                            altijd de juiste hoeveelheid water krijgen.
                         </p>
-                        <div className='flex'>
+                        <div className='flex justify-center md:justify-start'>
                             <a
                                 href='#'
                                 className='rounded-lg bg-[#77b255] px-4 py-2 duration-300 hover:bg-[#8bcf63]'
@@ -142,8 +135,8 @@ const OurWork = () => {
                         {/* <div className='section-gradient absolute -left-[250px] -top-[150px] z-[-1] h-[800px] w-[2200px] border-4'></div> */}
                         <Image
                             className='rounded-lg'
-                            src={hero}
-                            width={750}
+                            src={smart}
+                            width={850}
                             height={0}
                             alt='Test image'
                         />
@@ -163,7 +156,7 @@ const OurWork = () => {
                         },
                     },
                 }}
-                className='my-24 h-[50vh] px-4'
+                className='my-24 mb-96 h-[50vh] px-4'
             >
                 <motion.section
                     className='flex flex-col items-center justify-center md:flex-row'
@@ -172,17 +165,17 @@ const OurWork = () => {
                     <div>
                         <Image
                             className='rounded-lg'
-                            src={hero}
-                            width={750}
+                            src={smart_monitor}
+                            width={850}
                             height={0}
                             alt='Test image 2'
                         />
                     </div>
-                    <div className='ml-0 mt-4 flex max-w-xl flex-col space-y-4 rounded-2xl bg-[#0F5E05] px-4 py-4 text-white md:ml-20'>
-                        <h1 className='mb-[.5rem] text-4xl font-bold'>
-                            Lorem ipsum
+                    <div className='ml-0 mt-4 flex max-w-xl flex-col space-y-4 rounded-2xl bg-[#0F5E05] px-6 py-6 text-white md:ml-20'>
+                        <h1 className='mb-[.5rem] text-center text-4xl font-bold md:text-left'>
+                            Smart plant monitoring
                         </h1>
-                        <div className='flex gap-2'>
+                        <div className='flex justify-center gap-2 md:justify-start'>
                             <Badge className='bg-[#77b255] text-white hover:bg-[#8bcf63]'>
                                 Duurzaam
                             </Badge>
@@ -191,14 +184,14 @@ const OurWork = () => {
                                 Innovatief
                             </Badge>
                         </div>
-                        <p>
-                            Et aliquip non incididunt enim sit incididunt nisi
-                            mollit ad proident nostrud. Commodo excepteur ut
-                            eiusmod et dolor incididunt non ullamco. Ad enim est
-                            elit non Lorem aliquip enim aliquip consectetur aute
-                            deserunt sint nisi.
+                        <p className='text-center md:text-left'>
+                            Onze smart plant monitor is ontworpen om je planten
+                            optimaal te verzorgen door real-time gegevens te
+                            verzamelen over hun gezondheid, zoals vochtigheid en
+                            licht, zodat je altijd weet wanneer ze extra zorg
+                            nodig hebben.
                         </p>
-                        <div className='flex'>
+                        <div className='flex justify-center md:justify-start'>
                             <a
                                 href='#'
                                 className='rounded-lg bg-[#77b255] px-4 py-2 duration-300 hover:bg-[#8bcf63]'

@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import seedling from '../../../public/images/seedling-send-btn.svg'
-import wave from '../../../public/images/shapes/contact-wave.svg'
+import seedling from '@/images/seedling-send-btn.svg'
+import wave from '@/images/shapes/contact-wave.svg'
 import { Input } from '../ui/input'
 import { Textarea } from '../ui/textarea'
 

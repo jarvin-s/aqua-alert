@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import logo from '../../public/images/logo.png'
-import footer from '../../public/images/shapes/footer.svg'
+import logo from '@/images/logo.png'
+import footer from '@/images/shapes/footer.svg'
 
 const Footer = () => {
     return (
@@ -28,7 +28,7 @@ const Footer = () => {
                                 <span className='sr-only'>Aqua Alert</span>
                             </Link>
                             {/* Footer info with icons */}
-                            <div className='mt-4 text-white space-y-1'>
+                            <div className='mt-4 space-y-1 text-white'>
                                 <div className='flex gap-1'>
                                     <svg
                                         xmlns='http://www.w3.org/2000/svg'
@@ -83,9 +83,6 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className='flex w-[50%] justify-center'>
-                    <hr />
                 </div>
                 <div className='flex justify-center pb-4 pt-20 text-center md:text-left'>
                     <p className='text-white opacity-50'>
