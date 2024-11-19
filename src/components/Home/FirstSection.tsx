@@ -35,10 +35,14 @@ const FirstSection = () => {
                 >
                     <motion.div
                         variants={items_variants}
-                        className='flex flex-col gap-20 px-20'
+                        className='flex flex-col gap-20 px-4'
                     >
-                        <h1 className='text-6xl font-bold text-white'>
-                            Waarom ons?
+                        <h1 className='text-center text-6xl font-bold text-white md:text-left'>
+                            Waarom{' '}
+                            <span className='font-bold text-[#ff7e28]'>
+                                ons
+                            </span>
+                            ?
                         </h1>
                         <Image
                             src={whyus_arduino}
