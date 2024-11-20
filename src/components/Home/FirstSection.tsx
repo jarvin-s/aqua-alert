@@ -18,7 +18,7 @@ const FirstSection = () => {
     }
     return (
         <>
-            <div className='bg-[#0d214b]'>
+            <div className='h-screen bg-[#0d214b]'>
                 <motion.main
                     ref={ref}
                     initial='hidden'
@@ -31,7 +31,7 @@ const FirstSection = () => {
                             },
                         },
                     }}
-                    className='mx-auto flex h-[120rem] max-w-[1920px] flex-col justify-around pb-40 md:space-y-0 lg:h-[60vh] lg:flex-row'
+                    className='mx-auto flex max-w-[1920px] flex-col justify-around pb-40 md:space-y-0 lg:h-[60vh] lg:flex-row'
                 >
                     <motion.div
                         variants={items_variants}
@@ -51,7 +51,7 @@ const FirstSection = () => {
                         />
                     </motion.div>
                     <motion.div
-                        className='grid max-w-[1200px] grid-cols-1 gap-4 px-4 pt-10 lg:grid-cols-2'
+                        className='grid max-w-[1000px] grid-cols-1 gap-4 px-4 pt-10 lg:grid-cols-2'
                         variants={items_variants}
                     >
                         <div className='rounded-lg bg-[#9BEF90] p-6'>
