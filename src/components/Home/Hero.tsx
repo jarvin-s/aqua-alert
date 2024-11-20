@@ -9,7 +9,8 @@ import apple_store from '@/images/apple-store.svg'
 import { Esteban } from 'next/font/google'
 import { motion, useInView } from 'framer-motion'
 
-const agbalumo = Esteban({ weight: '400', subsets: ['latin'] })
+// Create variable for font
+const esteban = Esteban({ weight: '400', subsets: ['latin'] })
 const Hero = () => {
     const ref = useRef(null)
     // Show animation when element is 50% in view
@@ -34,6 +35,7 @@ const Hero = () => {
                 variants={{
                     visible: {
                         transition: {
+                            // Delay children of main div by 0.4 seconds
                             delayChildren: 0.4,
                         },
                     },
@@ -42,6 +44,7 @@ const Hero = () => {
             >
                 <motion.div
                     className='z-10 mt-20 flex max-w-[570px] flex-col items-center px-2 md:ml-20 md:items-stretch'
+                    // Add animation to Hero div
                     variants={items_variants}
                 >
                     <div className='absolute -left-[504px] top-[78px] z-[-1] rotate-[4deg] blur-[4px]'>
@@ -75,7 +78,7 @@ const Hero = () => {
                             overal.
                         </p>
                     </div>
-                    <div className={`${agbalumo.className} mt-4`}>
+                    <div className={`${esteban.className} mt-4`}>
                         <a
                             href='/contact'
                             className='rounded-xl bg-[#ff7e28] px-6 py-2 text-xl text-white duration-300 hover:bg-[#fc9958]'

@@ -85,7 +85,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='flex justify-center pb-4 pt-20 text-center md:text-left'>
-                    <p className='text-white opacity-50'>
+                    <p className='text-white opacity-30'>
                         © Aqua Alert B.V. Alle rechten voorbehouden.
                         <a
                             href='/terms-and-conditions'

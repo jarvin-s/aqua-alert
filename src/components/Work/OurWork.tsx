@@ -38,12 +38,14 @@ const OurWork = () => {
                             },
                         },
                     }}
+                    // Center div horizontally
                     className='flex justify-center'
                 >
                     <motion.div
                         className='flex flex-col items-center text-center'
                         variants={items_variants}
                     >
+                        {/* Text left & 8xl on medium screens or higher, below medium is text center & 7xl */}
                         <h1 className='text-center text-7xl text-white md:text-left md:text-8xl'>
                             Ons{' '}
                             <span className='font-bold text-[#0F5E05]'>
@@ -51,6 +53,7 @@ const OurWork = () => {
                             </span>
                             .
                         </h1>
+                        {/* Nax width so text is a block and readable */}
                         <p className='text-md mt-4 max-w-[34rem] text-white'>
                             Het werk wat wij doen als Aqua Alert richt zich op
                             het creëren van innovatieve en duurzame oplossingen
@@ -72,6 +75,7 @@ const OurWork = () => {
                     }}
                 >
                     <motion.div
+                        // Flex direction column on screens smaller than medium, above medium is flex direction row
                         className='flex flex-col items-center justify-center gap-10 px-4 md:flex-row md:items-stretch md:px-0'
                         variants={items_variants}
                     >
@@ -132,7 +136,6 @@ const OurWork = () => {
                         </div>
                     </div>
                     <div className='relative -mt-[11rem]'>
-                        {/* <div className='section-gradient absolute -left-[250px] -top-[150px] z-[-1] h-[800px] w-[2200px] border-4'></div> */}
                         <Image
                             className='rounded-lg'
                             src={smart}
