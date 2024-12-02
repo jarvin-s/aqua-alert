@@ -18,7 +18,7 @@ const FirstSection = () => {
     }
     return (
         <>
-            <div className='h-screen bg-[#0d214b]'>
+            <div className='bg-[#0d214b] md:h-screen'>
                 <motion.main
                     ref={ref}
                     initial='hidden'

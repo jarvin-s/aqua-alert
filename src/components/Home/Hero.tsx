@@ -99,7 +99,7 @@ const Hero = () => {
                             },
                         },
                     }}
-                    className='z-10 md:mt-20 mt-40 flex w-full justify-center'
+                    className='z-10 mt-40 flex w-full justify-center md:mt-20'
                 >
                     <motion.div
                         className='relative flex flex-col items-center gap-4'
